@@ -1,0 +1,12 @@
+
+*.log
+*.tmp
+.DS_Store
+
+
+node_modules/
+venv/
+__pycache__/
+
+
+.vscode/
