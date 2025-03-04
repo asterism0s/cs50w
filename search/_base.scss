@@ -1,7 +1,14 @@
 @import 'typography-styles';
 
+
 html, body {
     font-family: $font-family__base;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
