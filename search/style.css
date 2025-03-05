@@ -2,16 +2,23 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  height: 100vh;
+  width: 100%;
+}
+
 a {
   text-decoration: none;
 }
 
 .search-section {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
-  align-content: space-around;
+  height: 100vh;
+  width: auto;
+  justify-content: center;
 }
 
 .search-section__form {

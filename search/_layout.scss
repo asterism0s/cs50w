@@ -1,7 +1,9 @@
 .search-section {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
-    align-content: space-around;
+    height: 100vh;
+    width: auto;
+    justify-content: center;
 }

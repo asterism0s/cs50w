@@ -5,6 +5,11 @@ html, body {
     font-family: $font-family__base;
 }
 
+body {
+    height: 100vh;
+    width: 100%;
+}
+
 a {
     text-decoration: none; 
     }
