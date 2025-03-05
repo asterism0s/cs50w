@@ -7,3 +7,19 @@
     width: auto;
     justify-content: center;
 }
+
+.search-section__logo {
+    height: auto;
+    max-width: 300px;
+    width: 100%;
+}
+
+.container-form__button {
+    display: flex;
+}
+
+.form-input {
+    width: 50vw;
+    min-width: 200px;
+    max-width: 500px;
+}

@@ -21,6 +21,22 @@ a {
   justify-content: center;
 }
 
+.search-section__logo {
+  height: auto;
+  max-width: 300px;
+  width: 100%;
+}
+
+.container-form__button {
+  display: flex;
+}
+
+.form-input {
+  width: 50vw;
+  min-width: 200px;
+  max-width: 500px;
+}
+
 .search-section__form {
   display: flex;
   flex-direction: column;
@@ -30,4 +46,40 @@ a {
 .container-form__input {
   display: flex;
   justify-content: center;
+}
+
+.margin-sm {
+  margin: 8px;
+}
+
+.margin-md {
+  margin: 16px;
+}
+
+.margin-lg {
+  margin: 24px;
+}
+
+.padding-sm {
+  padding: 8px;
+}
+
+.padding-md {
+  padding: 16px;
+}
+
+.padding-lg {
+  padding: 24px;
+}
+
+.gap-sm {
+  gap: 8px;
+}
+
+.gap-md {
+  gap: 16px;
+}
+
+.gap-lg {
+  gap: 24px;
 }/*# sourceMappingURL=style.css.map */
