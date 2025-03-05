@@ -16,35 +16,30 @@
         <title>Google</title>
     </head>
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://images.google.com/">Image</a>
-                    </li>
-                    <li>
-                        <a href="https://www.google.com/advanced_search">Advanced Search</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <section>
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://images.google.com/">Image</a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/advanced_search">Advanced Search</a>
+                </li>
+            </ul>
+        </nav>
+        <section class="search-section">
             <div>
-                <img class="google-logo" src="google-logo.png" alt="Google's logo">
-            </div>
-            <div class="container-form">
-                <form action="https://google.com/search">
-                    <div class="container-form__input">
-                        <input type="text" name="q">
-                    </div>
-                    <div class="container-form__button">
-                        <input type="submit" value="Google Search">
-                        <input type="submit" value="I'm Feeling Lucky">
-                    </div>
-                    
-                </form>
+                <img class="search-section__logo" src="google-logo.png" alt="Google's logo">
             </div>
             
+            <form class="search-section__form" action="https://google.com/search">
+                <div class="container-form__input">
+                    <input type="text" name="q">
+                </div>
+                <div class="container-form__button">
+                    <input type="submit" value="Google Search">
+                    <input type="submit" value="I'm Feeling Lucky">
+                </div>  
+            </form>
         </section>
         
         <footer>

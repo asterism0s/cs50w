@@ -2,19 +2,22 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 a {
   text-decoration: none;
 }
 
-.container-form {
+.search-section {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.search-section__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container-form__input {
