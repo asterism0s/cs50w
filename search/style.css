@@ -52,18 +52,38 @@ a {
   margin: 8px;
 }
 
+.padding-sm {
+  padding: 8px;
+}
+
 .margin-md {
   margin: 16px;
+}
+
+.padding-md {
+  padding: 16px;
 }
 
 .margin-lg {
   margin: 24px;
 }
 
+.padding-lg {
+  padding: 24px;
+}
+
 .margin-xl {
   margin: 32px;
 }
 
+.padding-xl {
+  padding: 32px;
+}
+
 .margin-xxl {
   margin: 40px;
+}
+
+.padding-xxl {
+  padding: 40px;
 }/*# sourceMappingURL=style.css.map */

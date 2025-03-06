@@ -9,28 +9,20 @@ $spacers: (
 
 
 //margin spacing
-@mixin margin($size) {
-    margin: map-get($spacers, $size);
+@mixin spacing($property, $size) {
+    #{$property}: map-get($spacers, $size);
   }  
 
 @each $key, $value in $spacers {
     .margin-#{$key} {
-        @include margin($key);
+        @include spacing(margin, $key);
+    }
+    .padding-#{$key} {
+        @include spacing(padding, $key);
     }
 }
 
-// //padding spacing
-// .padding-sm {
-//     padding: $sm;
-// }
 
-// .padding-md {
-//     padding: $md;
-// }
-
-// .padding-lg {
-//     padding: $lg;
-// }
 
 // //gap spacing
 // .gap-sm {
