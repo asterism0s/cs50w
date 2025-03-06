@@ -1,3 +1,5 @@
+@import 'colors';
+
 .search-section {
     align-items: center;
     display: flex;
@@ -21,7 +23,7 @@
 .form-input {
     border-style: hidden;
     border-radius: 16px;
-    filter: drop-shadow(0 2px 3px rgb(207, 207, 207));
+    filter: drop-shadow(0 2px 3px #c2c2c2);
     max-width: 500px;
     min-width: 200px;
     width: 50vw;
@@ -29,4 +31,6 @@
 
 .form-button {
     border-style: hidden;
+    border-radius: 3px;
+    background-color: #f4f4f4;
 }
