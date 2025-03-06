@@ -1,44 +1,46 @@
-//basic spacing
-$sm: 8px;
-$md: 16px;
-$lg: 24px;
+//basic spacers
+$spacers: (
+    sm: 8px,
+    md: 16px,
+    lg: 24px,
+    xl: 32px,
+    xxl: 40px
+);
+
 
 //margin spacing
-.margin-sm {
-    margin: $sm
+@mixin margin($size) {
+    margin: map-get($spacers, $size);
+  }  
+
+@each $key, $value in $spacers {
+    .margin-#{$key} {
+        @include margin($key);
+    }
 }
 
-.margin-md {
-    margin: $md
-}
+// //padding spacing
+// .padding-sm {
+//     padding: $sm;
+// }
 
-.margin-lg {
-    margin: $lg
-}
+// .padding-md {
+//     padding: $md;
+// }
 
+// .padding-lg {
+//     padding: $lg;
+// }
 
-//padding spacing
-.padding-sm {
-    padding: $sm;
-}
+// //gap spacing
+// .gap-sm {
+//     gap: $sm;
+// }
 
-.padding-md {
-    padding: $md;
-}
+// .gap-md {
+//     gap: $md;
+// }
 
-.padding-lg {
-    padding: $lg;
-}
-
-//gap spacing
-.gap-sm {
-    gap: $sm;
-}
-
-.gap-md {
-    gap: $md;
-}
-
-.gap-lg {
-    gap: $lg;
-}
+// .gap-lg {
+//     gap: $lg;
+// }
