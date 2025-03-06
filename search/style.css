@@ -163,4 +163,54 @@ a {
 .padding-y-xxl {
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.margin-x-sm {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.padding-x-sm {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.margin-x-md {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.padding-x-md {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.margin-x-lg {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.padding-x-lg {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.margin-x-xl {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+.padding-x-xl {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.margin-x-xxl {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.padding-x-xxl {
+  padding-left: 40px;
+  padding-right: 40px;
 }/*# sourceMappingURL=style.css.map */

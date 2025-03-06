@@ -39,3 +39,17 @@ $spacers: (
         @include spacing-y(padding, $key);
     }
 }
+
+@mixin spacing-x($property, $size) {
+    #{$property}-left: map-get($spacers, $size);
+    #{$property}-right: map-get($spacers, $size);
+}
+
+@each $key, $value in $spacers {
+    .margin-x-#{$key} {
+        @include spacing-x(margin, $key);
+    }
+    .padding-x-#{$key} {
+        @include spacing-x(padding, $key);
+    }
+}
