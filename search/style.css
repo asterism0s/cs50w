@@ -56,12 +56,20 @@ a {
   padding: 8px;
 }
 
+.gap-sm {
+  gap: 8px;
+}
+
 .margin-md {
   margin: 16px;
 }
 
 .padding-md {
   padding: 16px;
+}
+
+.gap-md {
+  gap: 16px;
 }
 
 .margin-lg {
@@ -72,6 +80,10 @@ a {
   padding: 24px;
 }
 
+.gap-lg {
+  gap: 24px;
+}
+
 .margin-xl {
   margin: 32px;
 }
@@ -80,10 +92,18 @@ a {
   padding: 32px;
 }
 
+.gap-xl {
+  gap: 32px;
+}
+
 .margin-xxl {
   margin: 40px;
 }
 
 .padding-xxl {
   padding: 40px;
+}
+
+.gap-xxl {
+  gap: 40px;
 }/*# sourceMappingURL=style.css.map */
