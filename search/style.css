@@ -32,9 +32,12 @@ a {
 }
 
 .form-input {
-  width: 50vw;
-  min-width: 200px;
+  border-style: hidden;
+  border-radius: 16px;
+  filter: drop-shadow(0 2px 3px rgb(207, 207, 207));
   max-width: 500px;
+  min-width: 200px;
+  width: 50vw;
 }
 
 .search-section__form {
