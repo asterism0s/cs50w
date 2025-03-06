@@ -106,4 +106,54 @@ a {
 
 .gap-xxl {
   gap: 40px;
+}
+
+.margin-y-sm {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.padding-y-sm {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.margin-y-md {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.padding-y-md {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.margin-y-lg {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.padding-y-lg {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.margin-y-xl {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.padding-y-xl {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.margin-y-xxl {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.padding-y-xxl {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=style.css.map */

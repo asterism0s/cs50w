@@ -8,7 +8,7 @@ $spacers: (
 );
 
 
-//margin spacing
+//margin and padding spacing
 @mixin spacing($property, $size) {
     #{$property}: map-get($spacers, $size);
   }  
@@ -22,5 +22,20 @@ $spacers: (
     }
     .gap-#{$key} {
         @include spacing(gap, $key);
+    }
+}
+
+
+@mixin spacing-y($property, $size) {
+    #{$property}-top: map-get($spacers, $size);
+    #{$property}-bottom: map-get($spacers, $size);
+}
+
+@each $key, $value in $spacers {
+    .margin-y-#{$key} {
+        @include spacing-y(margin, $key);
+    }
+    .padding-y-#{$key} {
+        @include spacing-y(padding, $key);
     }
 }
