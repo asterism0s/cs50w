@@ -11,6 +11,17 @@ a {
   text-decoration: none;
 }
 
+.search-section__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-form__input {
+  display: flex;
+  justify-content: center;
+}
+
 .search-section {
   align-items: center;
   display: flex;
@@ -44,17 +55,6 @@ a {
   border-style: hidden;
   border-radius: 3px;
   background-color: #f4f4f4;
-}
-
-.search-section__form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.container-form__input {
-  display: flex;
-  justify-content: center;
 }
 
 .margin-sm {
