@@ -5,6 +5,7 @@
 }
 
 .container-form__input {
+
     display: flex;
     justify-content: center;
 }
@@ -30,11 +31,20 @@
 }
 
 .form-input {
+    background-image: url('searchicon.png');
+    background-size: 16px;
+    background-position: 16px 16px; 
+    background-repeat: no-repeat;
+    box-sizing: border-box;
     border-style: hidden;
-    border-radius: 16px;
+    border-radius: 32px;
+    
     filter: drop-shadow(0 2px 3px #c2c2c2);
+    font-size: 16px;
+
     max-width: 500px;
     min-width: 200px;
+
     width: 50vw;
 }
 
