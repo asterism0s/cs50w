@@ -38,6 +38,12 @@ a {
   width: 100%;
 }
 
+.search-section__text {
+  bottom: 28px;
+  left: 110px;
+  position: relative;
+}
+
 .container-form__button {
   display: flex;
 }
@@ -58,15 +64,15 @@ a {
 }
 
 .form-input:focus {
-  outline: none !important;
   border: #c4c4c4;
   box-shadow: 0 1px 3px #c4c4c4;
+  outline: none !important;
 }
 
 .form-button {
+  background-color: #f4f4f4;
   border-style: hidden;
   border-radius: 3px;
-  background-color: #f4f4f4;
   cursor: pointer;
 }
 

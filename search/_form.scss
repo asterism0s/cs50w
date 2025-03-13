@@ -7,7 +7,6 @@
 }
 
 .container-form__input {
-
     display: flex;
     justify-content: center;
 }
@@ -28,6 +27,12 @@
     width: 100%;
 }
 
+.search-section__text{
+    bottom: 28px;
+    left: 110px;
+    position:relative;
+}
+
 .container-form__button {
     display: flex;
 
@@ -42,7 +47,7 @@
     border-style: hidden;
     border-radius: 32px;
     
-    filter: drop-shadow(0 2px 3px #c4c4c4);
+    filter: drop-shadow(0 2px 3px $light-grey);
     font-size: 16px;
 
     max-width: 500px;
@@ -52,15 +57,15 @@
 }
 
 .form-input:focus {
+    border: $light-grey;
+    box-shadow: 0 1px 3px $light-grey;
     outline: none !important;
-    border: #c4c4c4;
-    box-shadow: 0 1px 3px #c4c4c4;
 }
 
 .form-button {
+    background-color: #f4f4f4;
     border-style: hidden;
     border-radius: 3px;
-    background-color: #f4f4f4;
 
     cursor: pointer;
 }
