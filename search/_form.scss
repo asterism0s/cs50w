@@ -30,6 +30,7 @@
 
 .container-form__button {
     display: flex;
+
 }
 
 .form-input {
@@ -60,4 +61,6 @@
     border-style: hidden;
     border-radius: 3px;
     background-color: #f4f4f4;
+
+    cursor: pointer;
 }

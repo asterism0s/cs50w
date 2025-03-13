@@ -67,6 +67,7 @@ a {
   border-style: hidden;
   border-radius: 3px;
   background-color: #f4f4f4;
+  cursor: pointer;
 }
 
 .nav {
