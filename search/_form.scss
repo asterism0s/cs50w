@@ -1,3 +1,5 @@
+@import 'colors';
+
 .search-section__form {
     align-items: center;
     display: flex;
@@ -39,13 +41,19 @@
     border-style: hidden;
     border-radius: 32px;
     
-    filter: drop-shadow(0 2px 3px #c2c2c2);
+    filter: drop-shadow(0 2px 3px #c4c4c4);
     font-size: 16px;
 
     max-width: 500px;
     min-width: 200px;
 
     width: 50vw;
+}
+
+.form-input:focus {
+    outline: none !important;
+    border: #c4c4c4;
+    box-shadow: 0 1px 3px #c4c4c4;
 }
 
 .form-button {
