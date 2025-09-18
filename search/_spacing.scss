@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //basic spacers
 $spacers: (
     sm: 8px,
@@ -10,7 +12,7 @@ $spacers: (
 
 //margin, padding and gap spacing
 @mixin spacing($property, $size) {
-    #{$property}: map-get($spacers, $size);
+    #{$property}: map.get($spacers, $size);
   }  
 
 @each $key, $value in $spacers {
@@ -27,8 +29,8 @@ $spacers: (
 
 //y-axis spacing
 @mixin spacing-y($property, $size) {
-    #{$property}-top: map-get($spacers, $size);
-    #{$property}-bottom: map-get($spacers, $size);
+    #{$property}-top: map.get($spacers, $size);
+    #{$property}-bottom: map.get($spacers, $size);
 }
 
 @each $key, $value in $spacers {
@@ -42,8 +44,8 @@ $spacers: (
 
 //x-axis spacing
 @mixin spacing-x($property, $size) {
-    #{$property}-left: map-get($spacers, $size);
-    #{$property}-right: map-get($spacers, $size);
+    #{$property}-left: map.get($spacers, $size);
+    #{$property}-right: map.get($spacers, $size);
 }
 
 @each $key, $value in $spacers {

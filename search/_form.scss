@@ -1,4 +1,4 @@
-@import 'colors';
+@use './colors';
 
 .search-section__form {
     align-items: center;
@@ -29,7 +29,7 @@
 
 .search-section__text{
     bottom: 28px;
-    color: $brand-color-primary-medium;
+    color: colors.$brand-color-primary-medium;
     left: 115px;
     position: relative;
 }
@@ -48,7 +48,7 @@
     border-style: hidden;
     border-radius: 32px;
     
-    filter: drop-shadow(0 2px 3px $light-grey);
+    filter: drop-shadow(0 2px 3px colors.$light-grey);
     font-size: 16px;
 
     max-width: 500px;
@@ -58,8 +58,8 @@
 }
 
 .form-input:focus {
-    border: $light-grey;
-    box-shadow: 0 1px 3px $light-grey;
+    border: colors.$light-grey;
+    box-shadow: 0 1px 3px colors.$light-grey;
     outline: none !important;
 }
 

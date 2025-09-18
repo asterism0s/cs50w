@@ -1,6 +1,6 @@
-@import 'base';
-@import 'variables';
-@import 'form';
-@import 'nav';
-@import 'spacing';
-@import 'typography-styles'
+@use './base' as *;
+@use './variables' as *;
+@use './form' as *;
+@use './nav' as *;
+@use './spacing' as *;
+@use './typography' as *;

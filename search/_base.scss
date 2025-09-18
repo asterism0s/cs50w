@@ -1,8 +1,8 @@
-@import 'typography-styles';
+@use './typography';
 
 
 html, body {
-    font-family: $font-family__base;
+    font-family: typography.$font-family__base;
 }
 
 body {
