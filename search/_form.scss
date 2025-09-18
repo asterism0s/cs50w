@@ -1,4 +1,5 @@
 @use './colors';
+@use './typography';
 
 .search-section__form {
     align-items: center;
@@ -67,6 +68,8 @@
     background-color: #f4f4f4;
     border-style: hidden;
     border-radius: 3px;
+
+    font-family: typography.$font-family__base;
 
     cursor: pointer;
 }
