@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+}
+
 html, body {
   font-family: "Roboto", sans-serif;
 }
@@ -5,6 +10,7 @@ html, body {
 body {
   height: 100vh;
   width: 100%;
+  margin: auto;
 }
 
 a {
