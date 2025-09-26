@@ -6,11 +6,13 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .container-form__input {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .search-section {
@@ -25,14 +27,14 @@
 
 .search-section__logo {
     height: auto;
-    max-width: 300px;
+    max-width: 18.75rem;
     width: 100%;
 }
 
 .search-section__text{
-    bottom: 28px;
+    bottom: 1.75rem;
     color: colors.$brand-color-primary-medium;
-    left: 115px;
+    left: 7rem;
     position: relative;
 }
 
@@ -43,20 +45,19 @@
 
 .form-input {
     background-image: url('searchicon.png');
-    background-size: 16px;
-    background-position: 16px 16px; 
+    background-size: 1rem;
+    background-position: 1rem 1rem; 
     background-repeat: no-repeat;
     box-sizing: border-box;
     border-style: hidden;
-    border-radius: 32px;
+    border-radius: 2rem;
     
     filter: drop-shadow(0 2px 3px colors.$light-grey);
-    font-size: 16px;
 
-    max-width: 500px;
-    min-width: 200px;
+    max-width: 31.25rem;
+    min-width: 12.5rem;
 
-    width: 50vw;
+    width: 100%;
 }
 
 .form-input:focus {
@@ -68,10 +69,11 @@
 .form-button {
     background-color: #f4f4f4;
     border-style: hidden;
-    border-radius: 3px;
+    border-radius: 0.1rem;
     
-    color: #202124;
+    color: #727272;
     font-family: fonts.$font-family__base;
+    font-size: 0.8rem;
 
     cursor: pointer;
 }
