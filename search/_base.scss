@@ -1,13 +1,10 @@
-@use './typography';
+
 
 * {
     box-sizing: border-box;
     padding: 0;
 }
 
-html, body {
-    font-family: typography.$font-family__base;
-}
 
 body {
     height: 100vh;

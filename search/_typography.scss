@@ -1,2 +1,9 @@
-//fonts
-$font-family__base: 'Roboto', sans-serif;
+@use './fonts';
+
+html {
+    font-size: 16px;
+}
+
+html, body {
+    font-family: fonts.$font-family__base;
+}
