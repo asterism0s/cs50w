@@ -1,8 +1,10 @@
 .nav {
     display: flex;
     justify-content: flex-end;
+    &__list {
+        display: flex;
+
+        font-size: 0.8rem;
+    }
 }
 
-.nav__list {
-    display: flex;
-}

@@ -95,9 +95,9 @@ html, body {
   display: flex;
   justify-content: flex-end;
 }
-
 .nav__list {
   display: flex;
+  font-size: 0.8rem;
 }
 
 .margin-sm {
