@@ -100,6 +100,11 @@ html, body {
   font-size: 0.8rem;
 }
 
+.nav__logo {
+  width: 4.5rem;
+  height: 1.5rem;
+}
+
 .margin-sm {
   margin: 8px;
 }
