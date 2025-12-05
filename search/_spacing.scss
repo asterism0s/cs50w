@@ -27,7 +27,7 @@ $spacers: (
     }
 }
 
-//y-axis spacing
+//y-axis spacing - top/bottom
 @mixin spacing-y($property, $size) {
     #{$property}-top: map.get($spacers, $size);
     #{$property}-bottom: map.get($spacers, $size);
@@ -42,7 +42,7 @@ $spacers: (
     }
 }
 
-//x-axis spacing
+//x-axis spacing - left/right
 @mixin spacing-x($property, $size) {
     #{$property}-left: map.get($spacers, $size);
     #{$property}-right: map.get($spacers, $size);
