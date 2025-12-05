@@ -27,6 +27,11 @@ html, body {
   flex-direction: column;
   width: 100%;
 }
+.search-section__form--advanced {
+  display: flex;
+  flex-direction: column;
+  max-width: 28.75rem;
+}
 
 .container-form__input {
   display: flex;
