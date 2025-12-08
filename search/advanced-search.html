@@ -28,28 +28,32 @@
             <hr /> 
 
             <section>
-                <form class="search-section__form--advanced">
-                    <h2>Finding pages with...</h2>
-                    <div>
-                        <p>all these words</p> 
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p>this exact word or phrase</p> 
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p>any of these words</p> 
-                        <input type="text">
-                    </div>
-                    <div>
-                        <p>none of these words</p> 
-                        <input type="text">
-                    </div>
-                    <div>
-                        <input type="submit" value="Advanced Search">
+                <form class="advanced-form padding-xxl">
+                    <h2 class="advanced-form__title">Finding pages with...</h2>
+                
+                    <div class="advanced-form__field">
+                        <label class="advanced-form__label">all these words:</label>
+                        <input class="advanced-form__input" type="text">
                     </div>
                 
+                    <div class="advanced-form__field">
+                        <label class="advanced-form__label">this exact word or phrase:</label>
+                        <input class="advanced-form__input" type="text">
+                    </div>
+                
+                    <div class="advanced-form__field">
+                        <label class="advanced-form__label">any of these words:</label>
+                        <input class="advanced-form__input" type="text">
+                    </div>
+                
+                    <div class="advanced-form__field">
+                        <label class="advanced-form__label">none of these words:</label>
+                        <input class="advanced-form__input" type="text">
+                    </div>
+                
+                    <div class="advanced-form__actions">
+                        <input class="advanced-form__submit" type="submit" value="Advanced Search">
+                    </div>
                 </form>
 
             </section>
