@@ -81,7 +81,12 @@
 .main-advanced-search__title {
     font-family: fonts.$font-family__base;
     font-size: 1.2rem;
-    color: #d93025
+    color: colors.$brand-color-secondary-medium;
+}
+
+hr {
+    border: node;
+    border-top: 0.3px solid #ebebeb;
 }
 
 .advanced-form {
@@ -91,10 +96,9 @@
 
     max-width: 43rem;
 
-
     &__title {
         color: colors.$neutral-color-dark;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 
     &__label {
@@ -103,7 +107,6 @@
         color: colors.$neutral-color-dark;
         font-size: 0.75rem;
 
-        max-width: 9rem;
         width: 9rem;
     }
 
@@ -112,8 +115,24 @@
         border: 0.2px solid colors.$light-grey;
 
         height: 1.7rem;
-        width: 27rem;
+        width: 28.7rem;
 
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__submit {
+        background-color: colors.$brand-color-primary-medium;
+        border: none;
+        color: colors.$neutral-color-light;
+        font-family: fonts.$font-family__base;
+        font-size: 0.7rem;
+
+        width: 7.5rem;
+        height: 1.8rem;
     }
 
 }
