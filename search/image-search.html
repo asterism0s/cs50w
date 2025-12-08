@@ -32,13 +32,14 @@
             <img class="search-section__logo margin-sm" src="google-logo.png" alt="Google's logo">
             <p class="search-section__text">Images</p>
             
-            <form class="search-section__form" action="https://google.com/search">
+            <form class="search-section__form" action="https://www.google.com/search" method="GET">
                 <div class="container-form__input padding-md">
+                    <input type="hidden" name="tbm" value="isch">
                     <input type="text" class="form-input padding-md padding-x-xxl"  name="q">
                 </div>
                 <div class="container-form__button gap-md">
                     <input class="form-button padding-y-sm padding-x-md" type="submit" value="Google Search">
-                    <input class="form-button padding-y-sm padding-x-md" type="submit" value="I'm Feeling Lucky">
+                    
                 </div>  
             </form>
         </section>
