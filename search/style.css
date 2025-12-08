@@ -100,8 +100,8 @@ html, body {
 .advanced-form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 28.75rem;
+  gap: 0.9rem;
+  max-width: 43rem;
 }
 .advanced-form__title {
   color: #202124;
@@ -111,8 +111,14 @@ html, body {
   display: inline-block;
   color: #202124;
   font-size: 0.75rem;
-  max-width: 12.5rem;
-  width: 10rem;
+  max-width: 9rem;
+  width: 9rem;
+}
+.advanced-form__input {
+  border-radius: 0.1rem;
+  border: 0.2px solid #c4c4c4;
+  height: 1.7rem;
+  width: 27rem;
 }
 
 .nav {
