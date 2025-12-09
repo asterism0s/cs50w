@@ -3,6 +3,7 @@
 @use './typography';
 
 
+
 .search-section__form {
     align-items: center;
     display: flex;
@@ -53,7 +54,7 @@
     box-sizing: border-box;
     border-style: hidden;
     border-radius: 2rem;
-    
+
     font-family: fonts.$font-family__base;
     filter: drop-shadow(0 2px 3px colors.$light-grey);
 
@@ -117,10 +118,18 @@ hr {
         border-radius: 0.1rem;
         border: 0.2px solid colors.$light-grey;
 
+        font-family: fonts.$font-family__base;
+        
+        padding-left: 0.5rem;
         height: 1.7rem;
         width: 28.7rem;
 
+        
     }
+
+    &__input:focus {
+            outline:0.2px solid colors.$brand-color-primary-medium;
+        }
 
     &__actions {
         display: flex;
