@@ -2,6 +2,7 @@
 @use './fonts';
 @use './typography';
 
+
 .search-section__form {
     align-items: center;
     display: flex;
@@ -12,6 +13,7 @@
 .container-form__input {
     display: flex;
     justify-content: center;
+
     width: 100%;
 }
 
@@ -52,6 +54,7 @@
     border-style: hidden;
     border-radius: 2rem;
     
+    font-family: fonts.$font-family__base;
     filter: drop-shadow(0 2px 3px colors.$light-grey);
 
     max-width: 31.25rem;
