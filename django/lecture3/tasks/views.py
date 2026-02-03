@@ -9,4 +9,4 @@ def index(request):
     })
 
 def add (request):
-    return render(request, "task/add.html")
+    return render(request, "tasks/add.html")
