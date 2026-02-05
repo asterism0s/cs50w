@@ -5,6 +5,7 @@ tasks = ["foo", "bar", "baz"]
 
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="New Task")
+    priority = forms.IntegerField(label="Priority", min_value=1, max_value=10)
 
 
 # Create your views here.
