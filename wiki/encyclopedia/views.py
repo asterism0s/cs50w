@@ -11,22 +11,22 @@ def index(request):
 
 def entry(request, title):
      
-
+  
     entries = util.list_entries()
-
     for entry in entries:
+        
         if entry.lower() == title.lower():
-            show_title = entry
+            content = util.get_entry(entry)
+            return HttpResponse(content)
+        
+    return HttpResponse("Entry not found")
 
-    #pegar o que foi escrito na url e converter pra lower
-    #pegar a entry e converter pra lower
-    #comparar as strings
-    #mandar pra fora
 
-    content = util.get_entry(title)
-    
-    return HttpResponse(show_title)
+
 
     # return render (request, "wiki/entry.html", {
     #     content: title.lower()
     # })
+
+        #content = util.get_entry(title)
+    #entries = util.list_entries()
