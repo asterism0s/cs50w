@@ -25,7 +25,8 @@ def entry(request, title):
                 "content": content_mk
             })
         
-    return HttpResponse("Entry not found")
+    return render(request, "encyclopedia/error.html")
+
 
 
 
