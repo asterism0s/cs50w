@@ -18,10 +18,11 @@ def entry(request, title):
         
         if entry.lower() == title.lower():
             content = util.get_entry(entry)
-            print(content)
+            content_mk = markdown(content)
+            print(content_mk)
             return render(request, "encyclopedia/entry.html", {
                 "title": entry,
-                "content": content
+                "content": content_mk
             })
         
     return HttpResponse("Entry not found")
