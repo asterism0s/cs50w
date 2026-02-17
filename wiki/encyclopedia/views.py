@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from markdown2 import markdown
 
 from . import util
 
@@ -17,7 +18,11 @@ def entry(request, title):
         
         if entry.lower() == title.lower():
             content = util.get_entry(entry)
-            return HttpResponse(content)
+            print(content)
+            return render(request, "encyclopedia/entry.html", {
+                "title": entry,
+                "content": content
+            })
         
     return HttpResponse("Entry not found")
 
