@@ -1,5 +1,5 @@
 {% extends "encyclopedia/layout.html" %}
 
-{% block content %}
-    <p>{{ content }}</p>
+{% block body %}
+    <p>{{ content|safe }}</p>
 {% endblock %}
