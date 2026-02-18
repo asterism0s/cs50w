@@ -26,14 +26,3 @@ def entry(request, title):
             })
         
     return render(request, "encyclopedia/error.html")
-
-
-
-
-
-    # return render (request, "wiki/entry.html", {
-    #     content: title.lower()
-    # })
-
-        #content = util.get_entry(title)
-    #entries = util.list_entries()
