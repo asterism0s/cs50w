@@ -11,7 +11,6 @@ def index(request):
 
 def entry(request, title):
      
-  
     entries = util.list_entries()
     for entry in entries:
         
@@ -20,7 +19,7 @@ def entry(request, title):
             content_mk = markdown(content)
             print(content_mk)
             return render(request, "encyclopedia/entry.html", {
-                "title": entry,
+                                "title": entry,
                 "content": content_mk
             })
         
@@ -35,7 +34,7 @@ def search(request):
         print(entry)
 
         if query.lower() == entry.lower():
-            return redirect('')
+            return redirect('title', query)
 
 
     #print(f"Data received: {query}")
