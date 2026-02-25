@@ -6,10 +6,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>All Results for {{ title }}</h1>
+    <h1>All Results for {{ query }}</h1>
 
     <ul>
-       
+        {% for result in results %}
+            <li><a href="{% url 'title' result %}">{{ result }}</li></a>
+        {% endfor%}
     </ul>
 
 {% endblock %}
