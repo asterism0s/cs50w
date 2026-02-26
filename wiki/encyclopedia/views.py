@@ -46,3 +46,13 @@ def search(request):
                 "query": query,
                 "results": results
             })
+
+
+def create(request):
+
+    return 
+
+#usuário clica em "create new page" -> e com isso vai para uma url dedicada
+#nessa url precisa ver um formulario (com título e textarea)
+#usuario preenche e envia -> dados vão para o servidor => POST
+#django processa: checa se existe, salva ou mostra erro
