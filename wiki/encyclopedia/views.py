@@ -1,8 +1,12 @@
+from django import forms
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from markdown2 import markdown
 
 from . import util
+
+#class CreateNewEntry(forms.Form):
+
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -50,9 +54,16 @@ def search(request):
 
 def create(request):
 
-    return 
+    if request.method == "POST":
+        #recebe o formulário do usuário
+        #pega os dados, processa e salva
+        #redireciona
+    else:
+        #mostra o formulário vazio (get)
+
+    return render(request, 'create.html')
 
 #usuário clica em "create new page" -> e com isso vai para uma url dedicada
-#nessa url precisa ver um formulario (com título e textarea)
+#nessa url precisa ver um formulario (com título e textarea) => GET
 #usuario preenche e envia -> dados vão para o servidor => POST
 #django processa: checa se existe, salva ou mostra erro
