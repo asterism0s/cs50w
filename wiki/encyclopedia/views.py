@@ -5,7 +5,9 @@ from markdown2 import markdown
 
 from . import util
 
-#class CreateNewEntry(forms.Form):
+class NewEntryForm(forms.Form):
+    new_entry_title = forms.CharField(label="New Entry Title")
+    new_entry_body = forms.CharField(label="New Entry Body", widget=forms.Textarea)
 
 
 def index(request):
@@ -55,8 +57,12 @@ def search(request):
 def create(request):
 
     if request.method == "POST":
+        form = NewEntryForm(request.POST)
+        if form.is_valid():
+            new_entry = form.cleaned_data["new_entry"]
+            request.session
         #recebe o formulário do usuário
-        #pega os dados, processa e salva
+        #pega os dados, processa e salvE a
         #redireciona
     else:
         #mostra o formulário vazio (get)
