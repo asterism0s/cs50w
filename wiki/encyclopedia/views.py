@@ -56,18 +56,34 @@ def search(request):
 
 def create(request):
 
+    entries = util.list_entries()
+
     if request.method == "POST":
         form = NewEntryForm(request.POST)
         if form.is_valid():
-            new_entry = form.cleaned_data["new_entry"]
-            request.session
-        #recebe o formulário do usuário
-        #pega os dados, processa e salvE a
-        #redireciona
-    else:
-        #mostra o formulário vazio (get)
+            new_entry_title = form.cleaned_data["new_entry_title"]
+            new_entry_body = form.cleaned_data["new_entry_body"]
 
-    return render(request, 'create.html')
+            new_entry = {
+                "title": new_entry_title,
+                "body": new_entry_body
+            }
+
+            for entry in entries:
+                if entry.lower() == new_entry_title.lower():
+                    return HttpResponse("Error")
+                else:
+                    util.save_entry(new_entry_title, new_entry_body)
+
+
+    else:
+        return render(request, "encyclopedia/create.html", {
+            "form": form
+        })
+
+    return render(request, "encyclopedia/create.html", {
+        "form": NewEntryForm()
+    })
 
 #usuário clica em "create new page" -> e com isso vai para uma url dedicada
 #nessa url precisa ver um formulario (com título e textarea) => GET
