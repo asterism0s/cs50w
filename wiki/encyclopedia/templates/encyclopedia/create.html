@@ -15,7 +15,7 @@
     {% endif %}
 
 
-    <form action="{% url %}" method="post">
+    <form action="{% url 'create' %}" method="post">
         {% csrf_token %}
         {{ form }}
         <input type="submit">
