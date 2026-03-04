@@ -1,4 +1,5 @@
 from django import forms
+from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from markdown2 import markdown
@@ -6,8 +7,8 @@ from markdown2 import markdown
 from . import util
 
 class NewEntryForm(forms.Form):
-    new_entry_title = forms.CharField(label="New Entry Title")
-    new_entry_body = forms.CharField(label="New Entry Body", widget=forms.Textarea)
+    entry_title = forms.CharField(label="New Entry Title")
+    entry_body = forms.CharField(label="New Entry Body", widget=forms.Textarea)
 
 
 def index(request):
@@ -57,29 +58,30 @@ def search(request):
 def create(request):
 
     entries = util.list_entries()
+    entries_lower = [entry.lower() for entry in entries]   
 
     if request.method == "POST":
+        
         form = NewEntryForm(request.POST)
+
         if form.is_valid():
-            new_entry_title = form.cleaned_data["new_entry_title"]
-            new_entry_body = form.cleaned_data["new_entry_body"]
+            
+            entry_title = form.cleaned_data["entry_title"]
+            entry_body = form.cleaned_data["entry_body"]
 
-            new_entry = {
-                "title": new_entry_title,
-                "body": new_entry_body
-            }
+            entry_title_lower = entry_title.lower()
 
-            for entry in entries:
-                if entry.lower() == new_entry_title.lower():
-                    return HttpResponse("Error")
-                else:
-                    util.save_entry(new_entry_title, new_entry_body)
-
-
-    else:
-        return render(request, "encyclopedia/create.html", {
-            "form": form
-        })
+            
+            if entry_title_lower not in entries_lower:
+                util.save_entry(entry_title, entry_body)
+                return redirect('title', entry_title)
+                
+            else:
+                messages.error(request, "Sorry this entry already exists")
+                return render(request, "encyclopedia/create.html", {
+                    "form": form,
+                    
+            })
 
     return render(request, "encyclopedia/create.html", {
         "form": NewEntryForm()
