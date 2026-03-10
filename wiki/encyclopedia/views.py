@@ -77,7 +77,7 @@ def create(request):
                 return redirect('title', entry_title)
                 
             else:
-                messages.error(request, "Sorry this entry already exists")
+                form.add_error("entry_title", "Sorry this entry already exists")
                 return render(request, "encyclopedia/create.html", {
                     "form": form,
                     

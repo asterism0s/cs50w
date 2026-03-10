@@ -7,17 +7,12 @@
 {% block body %}
     
     <h1>Create New Page</h1>
-    {% if messages %}
-        {% for message in messages %}
-            <p>{{ message }}</p>
-        {% endfor %}
- 
-    {% endif %}
+    
 
 
     <form action="{% url 'create' %}" method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <input type="submit">
     </form>
 {% endblock %}
