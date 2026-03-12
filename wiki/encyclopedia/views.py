@@ -6,7 +6,7 @@ from markdown2 import markdown
 
 from . import util
 
-class NewEntryForm(forms.Form):
+class EntryForm(forms.Form):
     entry_title = forms.CharField(label="New Entry Title")
     entry_body = forms.CharField(label="New Entry Body", widget=forms.Textarea)
 
@@ -62,7 +62,7 @@ def create(request):
 
     if request.method == "POST":
         
-        form = NewEntryForm(request.POST)
+        form = EntryForm(request.POST)
 
         if form.is_valid():
             
@@ -84,10 +84,5 @@ def create(request):
             })
 
     return render(request, "encyclopedia/create.html", {
-        "form": NewEntryForm()
+        "form": EntryForm()
     })
-
-#usuário clica em "create new page" -> e com isso vai para uma url dedicada
-#nessa url precisa ver um formulario (com título e textarea) => GET
-#usuario preenche e envia -> dados vão para o servidor => POST
-#django processa: checa se existe, salva ou mostra erro
