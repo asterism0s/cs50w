@@ -97,6 +97,10 @@ def edit (request, title):
             'entry_body': entry_content
         })
 
+        return render(request, "encyclopedia/edit.html", {
+            "form": form
+        })
+
         #criar um formulário pré-populado com Título não editável e conteúdo
         #renderizar o template com o formulário
 
