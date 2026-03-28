@@ -86,3 +86,22 @@ def create(request):
     return render(request, "encyclopedia/create.html", {
         "form": EntryForm()
     })
+
+def edit (request, title):
+
+    if request.method == "GET":
+        form = EntryForm()
+        #receber o title da URL
+        #buscar conteúdo da entrada (util.get_entry)
+        #criar um formulário pré-populado com Título não editável e conteúdo
+        #renderizar o template com o formulário
+
+    if request.method == "POST":
+        #recewber os dados editados do formulário
+        form = EntryForm(request.POST)
+        #validar
+        #salvar sobreescrevendo com util.save_entry()
+        #redirecionare para a página da entrada em questão
+
+
+    return 
