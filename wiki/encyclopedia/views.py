@@ -93,12 +93,13 @@ def edit (request, title):
         entry_content = util.get_entry(title) 
 
         form = EntryForm(initial = {
-            'entry_title': title,
-            'entry_body': entry_content
+            "entry_title": title,
+            "entry_body": entry_content
         })
 
         return render(request, "encyclopedia/edit.html", {
-            "form": form
+            "form": form,
+            "title": title
         })
 
         #criar um formulário pré-populado com Título não editável e conteúdo
