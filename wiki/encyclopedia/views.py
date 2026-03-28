@@ -7,8 +7,8 @@ from markdown2 import markdown
 from . import util
 
 class EntryForm(forms.Form):
-    entry_title = forms.CharField(label="New Entry Title")
-    entry_body = forms.CharField(label="New Entry Body", widget=forms.Textarea)
+    entry_title = forms.CharField(label="Entry Title")
+    entry_body = forms.CharField(label="Entry Body", widget=forms.Textarea)
 
 
 def index(request):
@@ -109,13 +109,19 @@ def edit (request, title):
 
         form = EntryForm(request.POST)
 
+        form.fields["entry_title"].disabled = True
+        form.fields["entry_title"].required = False 
+
         if form.is_valid():
 
-            entry_title = form.cleaned_data["entry_title"]
+            entry_title = title
             entry_body = form.cleaned_data["entry_body"]
 
             util.save_entry(entry_title, entry_body)
 
             return redirect ("title", entry_title)
 
-    return 
+    return render(request, "encyclopedia/edit.html", {
+        "form": form,
+        "title": title
+    })
