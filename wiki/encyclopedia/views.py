@@ -90,18 +90,23 @@ def create(request):
 def edit (request, title):
 
     if request.method == "GET":
-        form = EntryForm()
-        #receber o title da URL
-        #buscar conteúdo da entrada (util.get_entry)
+        entry_content = util.get_entry(title) 
+
+        form = EntryForm(initial = {
+            'entry_title': title,
+            'entry_body': entry_content
+        })
+
         #criar um formulário pré-populado com Título não editável e conteúdo
         #renderizar o template com o formulário
 
     if request.method == "POST":
-        #recewber os dados editados do formulário
+        #receber os dados editados do formulário
         form = EntryForm(request.POST)
         #validar
         #salvar sobreescrevendo com util.save_entry()
-        #redirecionare para a página da entrada em questão
 
+        #redirecionare para a página da entrada em questão
+        return redirect ("title", title)
 
     return 
