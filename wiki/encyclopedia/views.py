@@ -98,6 +98,8 @@ def edit (request, title):
             "entry_body": entry_content
         })
 
+        form.fields["entry_title"].disabled = True
+
         return render(request, "encyclopedia/edit.html", {
             "form": form,
             "title": title
