@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from markdown2 import markdown
+import random
 
 from . import util
 
@@ -125,3 +126,11 @@ def edit (request, title):
         "form": form,
         "title": title
     })
+
+def random(request):
+    
+    entries = util.list_entries()
+
+    random_entry = random.choice(entries)
+
+    return redirect('title', title=random_entry)
