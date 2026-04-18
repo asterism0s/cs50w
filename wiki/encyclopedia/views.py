@@ -127,8 +127,8 @@ def edit (request, title):
         "title": title
     })
 
-def random(request):
-    
+def random_page(request):
+
     entries = util.list_entries()
 
     random_entry = random.choice(entries)
