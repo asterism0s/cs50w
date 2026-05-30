@@ -8,4 +8,11 @@
         <li>Duration: {{ flight.duration }}</li>
     </ul>
 
+    <h2>Passengers</h2>
+    <ul>
+        {% for passenger in passengers %}
+            <li> {{ passenger }} </li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
