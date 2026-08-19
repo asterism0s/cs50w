@@ -22,6 +22,13 @@ class AuctionListings(models.Model):
     title = models.CharField(max_length=64)
     start_bid  = models.DecimalField(max_digits=8, decimal_places=2)
 
-
     def __str__ (self):
         return f"{self.title} ({self.author})"
+
+class Bids(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="created_bids")
+    listing = models.ForeignKey(AuctionListings, on_delete=models.CASCADE, related_name="bids")
+    amount = models.DecimalField(max_digits=8, decimal_places=2)
+
+    def __str__(self):
+        return f"Bid of {self.amout} on {self.listing} by {self.author}"
