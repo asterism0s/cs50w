@@ -11,7 +11,7 @@ class Category (models.Model):
     def __str__(self):
         return f"{self.name}"
 
-class AuctionListings(models.Model):
+class AuctionListing(models.Model):
 
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="created_listings")
     category = models.ForeignKey(Category, related_name="listings", on_delete=models.SET_NULL, blank=True, null=True)
@@ -25,10 +25,10 @@ class AuctionListings(models.Model):
     def __str__ (self):
         return f"{self.title} ({self.author})"
 
-class Bids(models.Model):
+class Bid(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="created_bids")
-    listing = models.ForeignKey(AuctionListings, on_delete=models.CASCADE, related_name="bids")
+    listing = models.ForeignKey(AuctionListing, on_delete=models.CASCADE, related_name="bids")
     amount = models.DecimalField(max_digits=8, decimal_places=2)
 
     def __str__(self):
-        return f"Bid of {self.amout} on {self.listing} by {self.author}"
+        return f"Bid of {self.amount} on {self.listing} by {self.author}"
