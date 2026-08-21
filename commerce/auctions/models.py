@@ -8,6 +8,9 @@ class User(AbstractUser):
 class Category (models.Model):
     name = models.CharField(max_length=64)
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
     def __str__(self):
         return f"{self.name}"
 
