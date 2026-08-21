@@ -18,12 +18,12 @@ class AuctionListing(models.Model):
 
     author = models.ForeignKey(User, related_name="created_listings", on_delete=models.CASCADE)
     category = models.ForeignKey(Category, related_name="listings", on_delete=models.SET_NULL, blank=True, null=True)
-    creation_date = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(max_length=64)
     description = models.TextField()
     image = models.URLField(blank=True)
-    is_active = models.BooleanField(default=True)
-    title = models.CharField(max_length=64)
+    creation_date = models.DateTimeField(auto_now_add=True)
     start_bid  = models.DecimalField(max_digits=8, decimal_places=2)
+    is_active = models.BooleanField(default=True)
 
     def __str__ (self):
         return f"{self.title} ({self.author})"
