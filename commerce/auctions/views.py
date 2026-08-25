@@ -1,10 +1,12 @@
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
 from .models import User
+from .forms import ListingForm
 
 
 def index(request):
@@ -61,3 +63,20 @@ def register(request):
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "auctions/register.html")
+
+
+@login_required
+def create_view(request):
+
+    if request.method =="POST":
+        form = ListingForm(request.POST)
+
+        if form.is_valid():
+            #save the form to the database
+
+           
+            #render a page (perhaps the complete rendered form???? maybe use reverse()?)
+
+    #if it is GET OR INVALID:
+        # show the empty form
+         #render a template of the empty form
