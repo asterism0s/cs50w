@@ -72,11 +72,20 @@ def create_view(request):
         form = ListingForm(request.POST)
 
         if form.is_valid():
-            #save the form to the database
+            listing = form.save(commit=False)
+            listing.author = request.user
+            listing.save()
 
-           
+            #TODO change the render type when the page is created
+            return HttpResponse("Test")
             #render a page (perhaps the complete rendered form???? maybe use reverse()?)
+    
+    else:
+        form = ListingForm()
 
-    #if it is GET OR INVALID:
+    return render(request, "listing/create.html", {
+        "form": form
+    })
+    #if it is GET:
         # show the empty form
          #render a template of the empty form
