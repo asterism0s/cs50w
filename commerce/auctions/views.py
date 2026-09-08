@@ -83,7 +83,7 @@ def create_view(request):
     else:
         form = ListingForm()
 
-    return render(request, "listing/create.html", {
+    return render(request, "auctions/create.html", {
         "form": form
     })
     #if it is GET:
