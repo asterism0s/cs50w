@@ -1,21 +1,22 @@
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
+from django.db.models import Max
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
 
-from .models import User, AuctionListing
+from .models import User, AuctionListing, Bid
 from .forms import ListingForm
 
 
 def index(request):
-
     active_listings = AuctionListing.objects.filter(is_active=True)
 
     return render(request, "auctions/index.html",{
         "active_listings": active_listings
     })
+
 
 
 def login_view(request):
