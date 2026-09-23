@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.db.models import Max
 
 
 class User(AbstractUser):
@@ -27,6 +28,20 @@ class AuctionListing(models.Model):
 
     def __str__ (self):
         return f"{self.title} ({self.author})"
+
+    @property 
+    def current_price(self):
+        
+        biggest_amount = self.bids.aggregate(Max("amount"))
+
+        biggest_current_bid = biggest_amount["amount__max"]
+
+        return biggest_current_bid
+
+
+        
+        
+
 
 class Bid(models.Model):
     author = models.ForeignKey(User, related_name="created_bids", on_delete=models.CASCADE)
