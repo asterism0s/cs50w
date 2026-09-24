@@ -39,14 +39,12 @@ class AuctionListing(models.Model):
         return biggest_current_bid
 
 
-        
-        
-
 
 class Bid(models.Model):
     author = models.ForeignKey(User, related_name="created_bids", on_delete=models.CASCADE)
     listing = models.ForeignKey(AuctionListing, related_name="bids", on_delete=models.CASCADE)
     amount = models.DecimalField(max_digits=8, decimal_places=2)
+    creation_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Bid of {self.amount} on {self.listing} by {self.author}"
