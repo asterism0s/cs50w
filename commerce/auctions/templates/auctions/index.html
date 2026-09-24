@@ -5,7 +5,7 @@
     {% for listing in active_listings %}
         <div>
             <h2>{{ listing.title }}</h2>
-            <p>{{ listing.image }}</p>
+            <img src="{{ listing.image }}" alt="{{ listing.title }}">
             <p>{{ listing.description }}</p>
             <p>{{ listing.current_price }}</p>
 
